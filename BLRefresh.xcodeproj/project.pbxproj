@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F32FF4E1C088980007EE560 /* BLTwoLabelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF4D1C088980007EE560 /* BLTwoLabelsTableViewCell.m */; };
 		8C7A71981B17F53A00200643 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7A71971B17F53A00200643 /* main.m */; };
 		8C7A719B1B17F53A00200643 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7A719A1B17F53A00200643 /* AppDelegate.m */; };
 		8C7A719E1B17F53A00200643 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7A719D1B17F53A00200643 /* ViewController.m */; };
@@ -30,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F32FF4C1C088980007EE560 /* BLTwoLabelsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTwoLabelsTableViewCell.h; sourceTree = "<group>"; };
+		1F32FF4D1C088980007EE560 /* BLTwoLabelsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTwoLabelsTableViewCell.m; sourceTree = "<group>"; };
+		1F32FF501C089275007EE560 /* BLShowHeightProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLShowHeightProtocol.h; sourceTree = "<group>"; };
 		8C7A71921B17F53A00200643 /* BLRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7A71961B17F53A00200643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C7A71971B17F53A00200643 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +106,9 @@
 				8C7A71BD1B17FED300200643 /* BLTableViewCell.xib */,
 				8C7A71C01B17FF9B00200643 /* BLTableViewController.h */,
 				8C7A71C11B17FF9B00200643 /* BLTableViewController.m */,
+				1F32FF4C1C088980007EE560 /* BLTwoLabelsTableViewCell.h */,
+				1F32FF4D1C088980007EE560 /* BLTwoLabelsTableViewCell.m */,
+				1F32FF501C089275007EE560 /* BLShowHeightProtocol.h */,
 			);
 			path = BLRefresh;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 				TargetAttributes = {
 					8C7A71911B17F53900200643 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = HT4F83G285;
 					};
 					8C7A71AA1B17F53A00200643 = {
 						CreatedOnToolsVersion = 6.1;
@@ -234,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C7A719E1B17F53A00200643 /* ViewController.m in Sources */,
+				1F32FF4E1C088980007EE560 /* BLTwoLabelsTableViewCell.m in Sources */,
 				8C7A71BE1B17FED300200643 /* BLTableViewCell.m in Sources */,
 				8C7A719B1B17F53A00200643 /* AppDelegate.m in Sources */,
 				8C7A71C21B17FF9B00200643 /* BLTableViewController.m in Sources */,
@@ -360,9 +369,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BLRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.lwq.BLRefresh007;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -372,9 +383,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BLRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.lwq.BLRefresh007;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

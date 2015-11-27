@@ -8,12 +8,15 @@
 
 #import "BLTableViewController.h"
 #import "BLTableViewCell.h"
+#import "BLTwoLabelsTableViewCell.h"
 
- static NSString * const tableViewIdentifier = @"BLTableViewCell";
+static NSString * const tableViewIdentifier = @"BLTableViewCell";
+static NSString * const twoLabelsCellIdentifier = @"twoLabelsCellIdentifier";
 
 @interface BLTableViewController ()
 @property(nonatomic, strong)NSMutableArray *titles;
 @property(nonatomic, strong)BLTableViewCell *prototypeCell;
+@property(nonatomic, weak) IBOutlet UISwitch *onlyLabelSwitch;
 @end
 
 @implementation BLTableViewController
@@ -23,6 +26,7 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BLTableViewCell" bundle:nil] forCellReuseIdentifier:tableViewIdentifier];
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:tableViewIdentifier];
+
 }
 
 #pragma mark - Table view
@@ -33,6 +37,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.onlyLabelSwitch.on) {
+        BLTwoLabelsTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:twoLabelsCellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
     BLTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:tableViewIdentifier forIndexPath:indexPath];
 
     NSString *imageName = [NSString stringWithFormat:@"%ld",indexPath.row % 5];
@@ -79,6 +87,19 @@
         //必须+1  cell.bounds.size.height - cell.contentView.bounds.size.height = 1
         return recommendSize.height + 1;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell respondsToSelector:@selector(myheight)]) {
+        self.navigationItem.title = [NSString stringWithFormat:@"%.1f",[cell myheight]];
+    }
+}
+
+- (IBAction)chooseOnlyLabel:(id)sender
+{
+    [self.tableView reloadData];
 }
 
 #pragma mark - Private Method

@@ -11,7 +11,7 @@
 @implementation BLTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    // Initialization code    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
